@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Results</title>
+</head>
+<body>
+    <h1>Regex Results</h1>
 
+    {% if matches %}
+        <p>Matched Strings:</p>
+        <ul>
+            {% for match in matches %}
+                <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matches found.</p>
+    {% endif %}
+
+    <p>Email Validation Status: {{ email_status }}</p>
+</body>
+</html>
